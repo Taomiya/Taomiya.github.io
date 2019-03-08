@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>司空琪个人空间 - lmlblog.com</title>
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+	integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+	crossorigin="anonymous">
+<style type="text/css">
+body {
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+	font-family: "Oxygen", Arial, "Hiragino Sans GB", "Microsoft YaHei",
+		"STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+	font-size: 14px;
+}
+
+#top {
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	min-width: 1100px;
+	background-color: rgba(255, 255, 255, 0.94);
+	margin: auto;
+	z-index: 999;
+}
+
+#top>.head {
+	width: 1200px;
+	margin: auto;
+	border-bottom: 1px solid whitesmoke;
+	padding: 0;
+}
+
+.logo { /*设置相对定位，宽度为220像素，外边距内边距都为0*/
+	position: relative;
+	width: 220px;
+	margin: 0;
+	padding: 0;
+}
+
+.logo a { /*看漫漫图片*/
+	position: relative;
+	float: left;
+	width: 220px;
+	height: 50px;
+	background: url("图片/logo.png") no-repeat;
+	background-size: 180px 45px; /*设置图片大小为180像素宽，45像素高*/
+}
+
+h1 {
+	display: block;
+	font-size: 2em;
+	-webkit-margin-before: 0.67em;
+	-webkit-margin-after: 0.67em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	font-weight: bold;
+}
+
+#xu ul {
+	width: 650px;
+	float: left;
+	margin-top: 14px;
+	position: relative;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button,
+	textarea, p, blockquote, th, td, form {
+	margin: 0;
+	padding: 0;
+}
+
+ol, ul, li {
+	list-style-type: none;
+}
+
+#xu ul li {
+	float: left;
+	white-space: nowrap;
+	font-size: 16px;
+	color: #999;
+	margin: 0 0 0 30px;
+	line-height: 24px;
+	display: inline;
+	position: relative;
+	text-align: -webkit-match-parent
+}
+
+a {
+	text-decoration: none;
+}
+
+div#xu ul li a {
+	color: black;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+div#xu ul li a:hover {
+	color: #FF8862;
+}
+
+div#xu ul li .ben {
+	color: #FF8862;
+}
+
+ul, menu, dir {
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
+}
+
+div#xu ul li .sub li a {
+	color: #565656;
+	height: 35px;
+	line-height: 35px;
+	padding: 0px;
+	min-width: 100px;
+	display: block;
+	font-size: 16px;
+}
+
+div#xu ul li .sub li a:hover {
+	background-color: #FF8862;
+}
+
+div#xu ul li .sub {
+	width: inherit;
+	float: none;
+	margin-top: 8px;
+	background-color: rgba(255, 255, 255, 0.94);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	padding: 5px 5px;
+	text-align: center;
+	border-radius: 2px;
+	position: absolute;
+	z-index: 9999;
+	max-width: 150px;
+	left: -40px;
+}
+
+.fa-home:before { /*设置图标矢量图，直接官网link导入 房子图标*/
+	content: "\f015";
+}
+
+.fa-comments-o:before { /*设置图标矢量图，直接官网link导入 聊天图标*/
+	content: "\f086";
+}
+/*.fa-search:before {!*设置图标矢量图，直接官网link导入 搜索图标*!
+            content: "\f003";
+        }*/
+.fa-alipay:before {
+	content: "\f642";
+}
+
+.head_user {
+	float: right;
+	position: relative;
+	height: 50px;
+}
+
+li#search {
+	line-height: 50px;
+	text-align: center;
+	color: #a4a4a4;
+	position: relative;
+}
+
+.head_user li {
+	float: left;
+	width: 50px;
+	height: 50px;
+	cursor: pointer; /*设置鼠标样式为 伸出食指的手*/
+}
+
+.member {
+	padding-top: 50px;
+	background: #0a0627 url("图片/背景.jpg") bottom center fixed;
+	overflow: hidden;
+}
+
+.member_ba {
+	background: url("图片/二背景.jpg") no-repeat top center;
+	width: 1028px;
+	margin: 16px auto 0 auto;
+}
+
+.member_ba_center {
+	padding: 40px 0;
+	width: 1028px;
+	margin: auto;
+	min-height: 500px;
+}
+
+.member_ba_center_con {
+	padding: 40px 0;
+	width: 1280px;
+	margin: auto;
+	min-height: 500px;
+}
+
+.member_ba_center_con_center {
+	height: 260px;
+	width: 100%;
+}
+
+.member_ba_center_con_center_other {
+	background: rgba(255, 255, 255, 0.3);
+	width: 100px;
+	height: 100px;
+	padding: 4px;
+	border-radius: 50%;
+	margin: 45px 450px auto;
+	cursor: pointer;
+	position: relative;
+}
+
+.member_ba_center_con_center_other img { /*通过webkit-transition让图片旋转*/
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	-webkit-transition: 0.4s;
+	-webkit-transition: -webkit-transform 0.4s ease-out;
+	transition: transform 0.4s ease-out;
+	-moz-transition: -moz-transform 0.4s ease-out;
+}
+
+.member_ba_center_con_center_other img:hover {
+	/*通过webkit-transition让图片旋转360*/
+	transform: rotate(360deg);
+	-webkit-transform: rotateZ(360deg);
+	-moz-transform: rotateZ(360deg);
+}
+
+.member_ba_center_con_center_other .lmlblog-verify {
+	bottom: 4px;
+	right: 8px;
+	width: 20px;
+	height: 20px;
+	background-size: 20px;
+}
+
+.lmlblog-verify-a {
+	background-position: 0px -1px;
+}
+
+.lmlblog-verify {
+	position: absolute;
+	bottom: 1px;
+	right: 1px;
+	width: 16px;
+	height: 16px;
+	background-image: url("图片/lmlblog-verify-icon.png");
+	background-size: 16px;
+}
+
+.member_ba_username {
+	margin-top: 6px;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+	margin-right: 260px;
+}
+
+.member_ba h1 {
+	font-size: 20px;
+	display: inline;
+	font-weight: normal;
+	margin-right: 2px;
+}
+
+.girl {
+	background-color: #ff69b4;
+}
+
+.girl i:before {
+	content: "\f222";
+}
+
+.member_ba_username span {
+	vertical-align: text-bottom;
+	border-radius: 9px;
+	min-width: 8px;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 0 5px;
+	margin-left: 8px;
+	color: #ffffff;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.girl_borth1 {
+	background-color: #ffb800;
+}
+
+.girl_borth2 {
+	background-color: #ff5722;
+}
+
+.xuyu {
+	text-align: center;
+	color: white;
+	margin-top: 10px;
+	line-height: 18px;
+	text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+	margin-right: 260px;
+}
+
+.anniu {
+	text-align: center;
+	margin-top: 15px;
+	margin-right: 260px;
+}
+
+.anniu .guanzhu {
+	background-color: #fa7d3c;
+	border: 1px solid #fa7d3c;
+	border-radius: 2px;
+}
+
+.anniu .guanzhu:hover {
+	color: #aa9452;
+}
+
+.anniu .guanzhu-1 {
+	border: 1px solid #2196F3;
+	background-color: #2196F3;
+	margin-left: 10px;
+}
+
+.anniu .guanzhu-1:hover {
+	color: #aa9452;
+}
+
+.anniu span {
+	padding: 6px 20px;
+	border-radius: 2px;
+	font-size: 15px;
+	color: white;
+	display: inline-block;
+	box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.lm_menu li {
+	width: 100px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	position: relative;
+	color: #555;
+	display: inline-block;
+	height: 45px;
+	line-height: 45px;
+}
+
+.lm_menu {
+	width: 1018px;
+	background-color: white;
+	clear: both;
+	position: relative;
+	margin-bottom: 16px;
+	padding: 3px 5px 0;
+	text-align: center;
+}
+
+.lm_menu li.on {
+	background-color: #f1f1f1;
+}
+
+.lm_menu li.on:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '';
+	width: 100%;
+	border-bottom-color: #fff;
+	box-sizing: border-box;
+	pointer-events: none;
+	border: none;
+	border-radius: 0;
+	height: 45px;
+	border-bottom: 2px solid #eb7350;
+}
+
+.lm_menu li:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+	border-bottom: 2px solid #eb7350;
+}
+
+#bigleft {
+	width: 300px;
+	position: relative;
+	float: left;
+}
+
+#left1 {
+	width: 268px;
+	height: 41px;
+	background-color: white;
+	padding: 16px;
+}
+
+#left2 {
+	width: 268px;
+	height: 81px;
+	background-color: white;
+	margin-top: 20px;
+	padding: 16px;
+}
+
+#left2 audio {
+	width: 280px;
+}
+
+#left3 {
+	width: 268px;
+	height: 448px;
+	background-color: white;
+	margin-top: 20px;
+}
+
+#left4 {
+	width: 268px;
+	height: 361px;
+	background-color: white;
+	margin-top: 60px;
+	padding: 16px;
+}
+
+#left5 {
+	width: 268px;
+	height: 179px;
+	background-color: white;
+	margin-top: 20px;
+	padding: 16px;
+}
+
+#left1>li>strong {
+	font-weight: normal;
+	line-height: 25px;
+	overflow: hidden;
+	font-size: 20px;
+	position: relative;
+}
+
+li {
+	list-style-type: none;
+}
+
+#left1>li>span {
+	font-size: 12px;
+	display: block;
+	color: #808080;
+}
+
+#bigleft li {
+	float: left;
+	width: 25%;
+	text-align: center;
+	border-right: 1px solid #f1f1f1;
+	box-sizing: border-box;
+}
+
+#left2 h3, #left3 h3, #left4 h3, #left5 h3 {
+	font-size: 14px;
+	border-left: 3px solid #ee5044;
+	padding-left: 8px;
+	line-height: 16px;
+	margin-bottom: 10px;
+}
+
+#left4 li img {
+	width: 57px;
+	height: 57px;
+	border: 0;
+	overflow: hidden;
+}
+
+#left5 h2 {
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 17px;
+	margin: 0px;
+	padding-bottom: 0px;
+}
+
+#left5 a {
+	text-decoration: none;
+	color: black;
+	font-size: 14px;
+}
+	body {
+    font-family: "Oxygen",Arial,"Hiragino Sans GB","Microsoft YaHei","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+ 
+	}
+	#d000{
+	position:absolute;
+	top:1680px;
+	right:200px;
+	background-image: url("web_imgs/058.png");
+	background-color: #fff;
+    clear: both;
+    padding: 18px 0px 5px;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 800px;
+	width: 710px;
+	height: 533px;	
+	}
+	#d00{
+	position:absolute;
+	top:1100px;
+	right:200px;
+	background-image: url("web_imgs/058.png");
+	background-color: #fff;
+    clear: both;
+    padding: 18px 0px 5px;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 800px;
+	width: 710px;
+	height: 533px;	
+	}
+	#d0{
+	position:absolute;
+	top:517px;
+	right:200px;
+	background-image: url("web_imgs/058.png");
+	background-color: #fff;
+    clear: both;
+    padding: 18px 0px 5px;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 800px;
+	width: 710px;
+	height: 533px;	
+	}
+	#d1{
+		width: 210px;
+		height: 54px;
+	}
+	#d1_1{
+		font-size: 14px;
+    	vertical-align: middle;
+   	 	line-height: 100%;
+    	margin: 0 0 17px 20px;
+  		
+	}
+	#d1 img{
+		height: 52px;
+   		width: 50px;
+   		vertical-align: middle;
+  		border-radius: 100%;
+    	border: 1px solid #f3f3f3
+	}
+	#d2>p{
+	display:block;
+    line-height: 30px;
+    position: relative;
+    margin: 0px 10px;
+	}
+	body>div>img{
+	width: 203px;
+    height: 150px;
+    margin: 15px;
+	}
+	#d3>img{
+		    width: 38px;
+    height: 38px;
+    border-radius: 100%;
+    border: 1px solid #f2f2f5;
+    background-color: #e0dcdc;
+	}
+	#d3{
+	    padding: 5px 0 0;
+    border-top: 1px solid #f7f7f7;
+    margin: 10px 20px 0px;
+	}
+	#d1_1>img{
+		display: inline-block;
+		position: absolute;
+		left: 5px;
+		top: 20px;
+	}
+	#d1_1>span{
+		display: block;
+		position:absolute;
+		left: 70px;
+		top: 20px;
+		font-weight: bold;
+	}
+	#d1_2>span{
+		display: block;
+		position:relative;
+		left:70px;
+		top: 15px;
+		color: #808080;
+	}
+</style>
+</head>
+<body>
+
+
+	<div id="top">
+		<header class="head">
+			<h1 class="logo">
+				<a href="#"></a>
+			</h1>
+			<div id="xu" class="menu">
+				<ul>
+					<li class="type"><a href="#" class="fa fa-home"> 个人中心 </a></li>
+					<li class="type"><a href="#" class="fa fa-comments-o"> 说说
+					</a></li>
+					<li class="type"><a
+						href="https://tieba.baidu.com/f?kw=%CB%BE%BF%D5%E7%F7&fr=ala0&tpl=5&traceid=">
+							贴吧 </a></li>
+					<li class="type"><a
+						href="https://weibo.com/u/6077164061?nick=司空琪吧官博"> 微博 </a></li>
+					<li class="type"><a class="ben"> 空间 </a></li>
+					<li class="type" id="xuan"><a href="#">好友</a>
+						<ul class="sub">
+							<li><a href="#">燕凌姣</a></li>
+							<li><a href="#">姬如雪</a></li>
+							<li><a href="#">陆林轩</a></li>
+							<li><a href="#">红莲</a></li>
+							<li><a href="#">陆雪琪</a></li>
+							<li><a href="#">画江湖</a></li>
+						</ul></li>
+				</ul>
+			</div>
+			<div class="head_user">
+				<ul>
+					<li id="search"><i class="fab fa-alipay"></i> 
+					</li>
+				</ul>
+			</div>
+		</header>
+	</div>
+	<div style="clear: both"></div>
+	<!--不允许有浮动对象,所以用clear清除全部-->
+	<div class="member">
+		<!--背景框，图片什么的可以设置-->
+		<div class="member_ba">
+
+			<div class="member_ba_center">
+
+				<div class="member_ba_center_con">
+
+					<div class="member_ba_center_con_center">
+
+						<div class="member_ba_center_con_center_other">
+
+							<img src="图片/sikongqi.jpg"> <i title="司空琪"
+								class="lmlblog-verify lmlblog-verify-a"></i>
+						</div>
+						<div class="member_ba_username">
+							<h1>司空琪</h1>
+							<span class="girl"> <i class="fa fa-mars"></i>
+							</span> <span class="girl_borth1" title="经验：3815">Lv.8</span> <span
+								class="girl_borth2" title="经验：3815">VIP 6</span>
+						</div>
+						<div class="xuyu">江湖风雨，几度阑珊。沧海一粟，愿君一剑轻安。</div>
+						<div class="anniu">
+							<a href="https://weibo.com/u/6077164061"> <span
+								class="guanzhu"> <i class="guanzhu_1"></i> +关注
+							</span>
+							</a> <span class="guanzhu-1"> <i class="guanzhu_2"></i> 私聊
+							</span>
+						</div>
+					</div>
+					<div class="lm_menu">
+						<li class="on">主页</li>
+						<li>动态</li>
+						<li><a
+							href="https://music.163.com/#/my/m/music/playlist?id=70463764"
+							style="color: #555">音乐</a></li>
+						<li>文章</li>
+						<li><a href="https://www.iqiyi.com/" style="color: #555">视频</a></li>
+						<li>个人档</li>
+
+					</div>
+					<div id=bigleft>
+						<div id=left1>
+							<li><strong>168</strong> <span>关注</span></li>
+							<li><strong>666</strong> <span>粉丝</span></li>
+							<li><strong>888</strong> <span>喜欢</span></li>
+							<li><strong>88888</strong> <span>人气</span></li>
+						</div>
+						<div id=left2>
+							<h3>背景音乐</h3>
+							<audio src="222.mp3" autoplay="" controls=""></audio>
+						</div>
+						<div id=left3>
+							<img src="222.png" width=300px>
+
+
+						</div>
+						<div id=left4>
+							<h3>最近访客</h3>
+							<li><a href="#1" title="访问时间：22分钟前"><img
+									src="picture/1.gif" class="avatar" /></a></li>
+							<li><a href="#2" title="访问时间：3小时前"><span
+									class="lmlblog-vip-icon"></span><img src="picture/qi.jpg"
+									class="avatar" /></a></li>
+							<li><a href="#3" title="访问时间：10小时前"><span
+									class="lmlblog-vip-icon"></span><img src="picture/2.gif"
+									class="avatar" /></a></li>
+							<li><a href="#4" title="访问时间：14小时前"><img
+									src="picture/3.gif" class="avatar" /></a></li>
+							<li><a href="#5" title="访问时间：15小时前"><img
+									src="picture/4.jpg" class="avatar" /></a></li>
+							<li><a href="#6" title="访问时间：1天前"><span
+									class="lmlblog-vip-icon"></span><img src="picture/5.png"
+									class="avatar" /></a></li>
+							<li><a href="#7" title="访问时间：1天前"><img
+									src="picture/6.gif" class="avatar" /></a></li>
+							<li><a href="#8" title="访问时间：1天前"><img
+									src="picture/7.gif" class="avatar" /></a></li>
+							<li><a href="#9" title="访问时间：1天前"><img
+									src="picture/8.gif" class="avatar" /></a></li>
+							<li><a href="#10" title="访问时间：2天前"><span
+									class="lmlblog-vip-icon"></span><img src="picture/9.gif"
+									class="avatar" /></a></li>
+							<li><a href="#11" title="访问时间：2天前"><span
+									class="lmlblog-vip-icon"></span><img src="picture/10.gif"
+									class="avatar" /></a></li>
+							<li><a href="#12" title="访问时间：3天前"><img
+									src="picture/11.gif" class="avatar" /></a></li>
+							<li><a href="#13" title="访问时间：3天前"><img
+									src="picture/12.gif" class="avatar" /></a></li>
+							<li><a href="#14" title="访问时间：3天前"><img
+									src="picture/13.gif" class="avatar" /></a></li>
+							<li><a href="#15" title="访问时间：4天前"><img
+									src="picture/14.jpg" class="avatar" /></a></li>
+							<li><a href="#16" title="访问时间：4天前"><span
+									class="lmlblog-vip-icon"></span><img src="picture/15.gif"
+									class="avatar" /></a></li>
+							<li><a href="#2528" title="访问时间：4天前"><img
+									src="picture/16.gif" class="avatar" /></a></li>
+							<li><a href="#52" title="访问时间：4天前"><img
+									src="picture/17.png" class="avatar" /></a></li>
+							<li><a href="#0292" title="访问时间：4天前"><img
+									src="picture/18.jpg" class="avatar" /></a></li>
+							<li><a href="#1753" title="访问时间：5天前"><img
+									src="picture/19.jpg" class="avatar" /></a></li>
+						</div>
+						<div id=left5>
+							<h3>相关推荐</h3>
+							<div id="lmlblog-memeber-bg-xg" class="aplayer"></div>
+							<a href="#"><h2>燕凌姣个人主页</h2>
+
+								<p>
+									一袭蓝衣亭亭玉立，姣若春梅绽雪，神如月射寒江，香培玉琢、英姿飒爽;其静兰生幽谷，其动若飞若扬，性格大气坚毅、疏朗开阔，举止敢爱敢恨、聪明磊落...他就是燕凌姣</p></a>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div id="d0">
+		<div id="d1">
+			<div id="d1_1">
+				<img src="web_imgs/tx2.jpg">
+				<span>司空琪</span>
+			</div>
+			<div id="d1_2">
+				<span>2018-12-14 05:25</span>
+			</div>
+		</div>
+		<div id="d2">
+			<p>　　疏星淡月，紫陌曲岸，持觞游赏，神移长川。一片彀纹，溶溶泄泄，忽而烟靡云敛。睹一丽人，缦立青水，云蒸雾霭，花衬善睐。荧荧兮若北辰之荣现，扰扰兮若紫玉之生烟。颜如舜华，迫闻素腰华琚摇;和颜静志，远望渌水呈雾绡。戏流光之夜蝶，采舞雪之琼花，流眷眷之眸光，润荣曜之笑靥。</p>
+			<p>　　偶得美人回顾，思之朝朝暮暮。采芝兰以明愫，寄琼琚以作妆。余咏永慕叹道长，彼应影独愿偕芳。才知世有解语，不过琪语溯光。<img src="web_imgs/66.png">
+			<img src="../web_imgs/8.png"></p>
+			
+		</div>
+		<img src="web_imgs/qi01.jpg">
+		<img src="web_imgs/qi02.jpg">
+		<img src="web_imgs/qi03.jpg">
+		<div id="d3">
+			<img src="web_imgs/11.gif">
+			<img src="web_imgs/20.png">
+			<img src="web_imgs/13.gif">
+			<img src="web_imgs/tx2.jpg">
+		</div>
+	</div>
+	<div id="d00">
+		<div id="d1">
+			<div id="d1_1">
+				<img src="web_imgs/tx2.jpg">
+				<span>司空琪</span>
+			</div>
+			<div id="d1_2">
+				<span>2018-12-14 05:25</span>
+			</div>
+		</div>
+		<div id="d2">
+			<p>　　疏星淡月，紫陌曲岸，持觞游赏，神移长川。一片彀纹，溶溶泄泄，忽而烟靡云敛。睹一丽人，缦立青水，云蒸雾霭，花衬善睐。荧荧兮若北辰之荣现，扰扰兮若紫玉之生烟。颜如舜华，迫闻素腰华琚摇;和颜静志，远望渌水呈雾绡。戏流光之夜蝶，采舞雪之琼花，流眷眷之眸光，润荣曜之笑靥。</p>
+			<p>　　偶得美人回顾，思之朝朝暮暮。采芝兰以明愫，寄琼琚以作妆。余咏永慕叹道长，彼应影独愿偕芳。才知世有解语，不过琪语溯光。<img src="web_imgs/66.png">
+			<img src="../web_imgs/8.png"></p>
+			
+		</div>
+		<img src="web_imgs/qi5.jpg">
+		<img src="web_imgs/qi6.jpg">
+		<img src="web_imgs/qi7.jpg">
+		<div id="d3">
+			<img src="web_imgs/11.gif">
+			<img src="web_imgs/20.png">
+			<img src="web_imgs/13.gif">
+			<img src="web_imgs/tx2.jpg">
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#xuan>ul').hide(); /*隐藏内容*/
+			$('#xuan').mouseover(function() {/*鼠标移入显示隐藏内容*/
+				$('#xuan>ul').show();
+			})
+			$("#xuan>ul").mouseout(function() {/*鼠标移出隐藏内容*/
+				$(this).hide();
+			});
+
+		})
+	</script>
+
+</body>
+</html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
